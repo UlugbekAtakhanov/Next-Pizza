@@ -74,7 +74,7 @@ const Admin = ({products, orders}) => {
                         </tr>
                         {orders.length && orders.map(item => {
                             return (
-                                <tr className='h-16'>
+                                <tr className='h-16' key={item._id}>
                                     <td>{item._id}</td>
                                     <td>{item.customer}</td>
                                     <td>${item.total}</td>

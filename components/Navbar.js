@@ -54,7 +54,7 @@ const Navbar = () => {
                         <li><a className='hover:text-grey-color' href="#contact">contact</a></li>
                     </ul>
 
-                    <Link href = "/cart">
+                    <Link href = "/cart" passHref>
                         <div className='relative group'>
                             <GiShoppingCart className='text-white text-4xl cursor-pointer' />
                             <span className='absolute group-hover:bg-gray-200 transition-all duration-200 bg-white top-[-5px] right-[-10px] text-orange font-bold w-6 h-6 rounded-full text-xs grid place-content-center'>{quantity}</span>
@@ -91,7 +91,7 @@ const Navbar = () => {
                     <motion.ul className="">
                         {
                             sidebar.map((item, index) => (
-                                <Link href={item.url}  key = {index}>
+                                <Link href={item.url}  key = {index} passHref>
                                     <li><motion.a 
                                     whileHover={{scale: 1.05}}
                                     onClick={() => setIsOpen(false)} className="text-white font-medium text-xl hover:text-gray-100 tracking-widest  capitalize block py-3 px-8">{item.page}</motion.a></li>

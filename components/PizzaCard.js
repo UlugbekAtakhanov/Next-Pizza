@@ -6,7 +6,7 @@ import Link from 'next/link';
 const PizzaCard = ({pizza}) => {
     return (
         <div className='flex flex-col items-center w-[230px] mb-2 group'>
-            <Link href = {`/product/${pizza._id}`}>
+            <Link href = {`/product/${pizza._id}`} passHref>
                 <div  className='relative w-[200px] h-[200px] cursor-pointer'>
                     <Image src = {pizza.img} layout='fill' objectFit='contain' alt = "" />
                 </div>
