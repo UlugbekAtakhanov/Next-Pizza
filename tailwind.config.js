@@ -18,7 +18,7 @@ module.exports = {
         "grey-color": "#AAAAAA"
       },
       fontFamily: {
-        "dance": "'Dancing Script', cursive",
+        "dance": ["'Dancing Script', cursive"],
       },
       boxShadow: {
         'custom1': " 0px 0px 3px 1px rgba(34, 60, 80, 0.2)",
