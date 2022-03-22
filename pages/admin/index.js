@@ -10,7 +10,7 @@ const Admin = ({products, orders}) => {
 
     const deleteProductHandler = async (itemId) => {
         try {
-            const {data} = await axios.delete("http://localhost:3000/api/products/" + itemId)
+            const {data} = await axios.delete(process.env.PROD_URL+"/api/products/" + itemId)
             setFilteredProducts(filteredProducts.filter(item => item._id !== data._id))
         } catch (error) {
             console.log(error)
@@ -104,8 +104,8 @@ export default Admin;
 
 export const getServerSideProps = async () => {
 
-    const products = await axios.get("http://localhost:3000/api/products")
-    const orders = await axios.get("http://localhost:3000/api/orders")
+    const products = await axios.get(process.env.PROD_URL+"/api/products")
+    const orders = await axios.get(process.env.PROD_URL+"/api/orders")
 
     return {
         props:{
